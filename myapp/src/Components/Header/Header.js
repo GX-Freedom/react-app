@@ -47,6 +47,9 @@ export default withRouter(({ location: { pathname } }) => (
             <Item current={pathname === "/"}>
                 <Slink to="/">Home</Slink>
             </Item>
+            <Item current={pathname === "/Blabla"}>
+                <Slink to="/Blabla">Blabla</Slink>
+            </Item>
             {/* <Item current={pathname === "/tv"}>
                 <Slink to="/tv">TV</Slink>
             </Item>
