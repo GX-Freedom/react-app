@@ -6,10 +6,11 @@ import Home from "Components/Routes/Home";
 // import Search from "Routes/Search";
 import Detail from "Components/Routes/Detail";
 import Blabla from "Components/Routes/Blabla";
-import Header from '../Components/Header';
+import Header from 'Components/Header';
 
 
 export default () => (
+
     <Router>
         <Header />
         <Switch>

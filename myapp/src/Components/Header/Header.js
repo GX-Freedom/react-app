@@ -41,8 +41,11 @@ const Slink = styled(Link)`
     font-size:1.3rem;
 `;
 
+
 export default withRouter(({ location: { pathname } }) => (
+
     <Header>
+
         <List>
             <Item current={pathname === "/"}>
                 <Slink to="/">Home</Slink>
