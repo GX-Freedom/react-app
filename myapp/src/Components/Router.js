@@ -9,7 +9,6 @@ import Blabla from "Components/Routes/Blabla";
 import Header from 'Components/Header';
 import Login from 'Components/Routes/Login';
 
-
 export default () => (
 
     <Router>
@@ -25,7 +24,7 @@ export default () => (
             <Route path="/movie/:id" component={Detail} />
             <Route path="/tv/:id" component={Detail} /> */}
             {/* <Route path="https://www.youtube.com/watch?v=" /> */}
-            <Redirect from="*" to="/" />
+            {/* <Redirect from="*" to="/" /> */}
         </Switch>
     </Router>
 )

@@ -1,6 +1,10 @@
 import React from "react";
 import { Link, withRouter } from 'react-router-dom';
 import styled from "styled-components";
+import dotenv from "dotenv";
+
+dotenv.config();
+
 
 const Header = styled.header`
     width:100%;
@@ -45,7 +49,9 @@ const Slink = styled(Link)`
 export default withRouter(({ location: { pathname } }) => (
 
     <Header>
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="594279705173-6n6pnsf3648uplr4gi6uoai4nmbsimeb.apps.googleusercontent.com"></meta>
         <List>
             <Item current={pathname === "/"}>
                 <Slink to="/">Home</Slink>

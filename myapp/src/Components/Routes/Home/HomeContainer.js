@@ -20,7 +20,7 @@ const Login = styled(Link)`
     border-bottom:2px solid blue;
 `;
 const LogOutBtn = styled.button`
-    font-size:1rem;
+    font-size:2rem;
     cursor: pointer;
 
 `;
@@ -38,7 +38,14 @@ const Home = () => {
             <Div>
                 <div>Home</div>
                 <div>
-                    {loggedIn ? name : "your"}  {loggedIn ? <LogOutBtn onClick={userLogOut}>LogOut</LogOutBtn> : <Login to="/login">LogIn</Login>}
+                    {loggedIn ? name : "your"}
+
+                    {loggedIn ?
+                        <LogOutBtn onClick={userLogOut}>
+                            LogOut
+                            <i className="fas fa-sign-out-alt"></i>
+                        </LogOutBtn>
+                        : <Login to="/login">LogIn</Login>}
                 </div>
             </Div>
         </>
