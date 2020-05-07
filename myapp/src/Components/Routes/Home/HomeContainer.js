@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { UserContext } from "Components/Context";
 // import HomePresenter from "./HomePresenter"
+import { Link } from 'react-router-dom';
 
 import styled from "styled-components";
 
@@ -12,17 +13,26 @@ const Div = styled.div`
     font-size:2rem;
 `;
 
+const Login = styled(Link)`
+    list-style:none;
+    color:black;
+    padding:3px;
+    border-bottom:2px solid blue;
+`;
+
+
 const Home = () => {
-    const { data: { name } } = UserContext
-    const context = useContext(UserContext)
-    console.log(UserContext)
-    console.log(context)
-    console.log(name)
+    const { user: { name, loggedIn } } = useContext(UserContext)
+    // const context = useContext(UserContext)
+    // console.log(UserContext)
+    // console.log(context)
+    // console.log(name)
 
     return (
         <>
-            <Div>Home
-                {name}
+            <Div>
+                <div>Home</div>
+                {loggedIn ? name : "your"}  {loggedIn ? "logout" : <Login to="/login">login</Login>}
             </Div>
         </>
     );

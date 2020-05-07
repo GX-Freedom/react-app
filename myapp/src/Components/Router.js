@@ -7,6 +7,7 @@ import Home from "Components/Routes/Home";
 import Detail from "Components/Routes/Detail";
 import Blabla from "Components/Routes/Blabla";
 import Header from 'Components/Header';
+import Login from 'Components/Routes/Login';
 
 
 export default () => (
@@ -17,6 +18,7 @@ export default () => (
             <Route path="/" exact component={Home} />
             <Route path="/detail/:id" component={Detail} />
             <Route path="/blabla" exact component={Blabla} />
+            <Route path="/login" exact component={Login} />
             {/* <Route path="/tv" exact component={TV} />
             <Route path="/movie" exact component={Movie} />
             <Route path="/search" component={Search} />

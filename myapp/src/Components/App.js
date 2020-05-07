@@ -1,7 +1,7 @@
 import React from 'react';
 import Router from './Router';
 import GlobalStyled from './GlobalStyle';
-import UserContextProvider from './context';
+import UserContextProvider from './Context';
 
 
 function App() {

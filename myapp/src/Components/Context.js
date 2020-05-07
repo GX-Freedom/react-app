@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const UserContext = React.createContext();
 
-UserContext.name = "KimJinYoung"
 
 const data = {
     name: "KimJinYoung",
     age: "30",
-    email: "kjy1670"
+    email: "kjy1670",
+    loggedIn: false
 }
 
-UserContext.data = data;
 
-const UserContextProvider = ({ children }) => (
-    <UserContext.Provider value={data}>
-        {children}
-    </UserContext.Provider>
-);
+const UserContextProvider = ({ children }) => {
+    const [user, setUser] = useState({
+        name: "KimJinYoung",
+        age: "30",
+        email: "kjy1670",
+        loggedIn: false
+    });
+
+    const userLogIn = () => setUser({ ...user, loggedIn: true })
+    return (
+        <UserContext.Provider value={{ user, userLogIn }}>
+            {children}
+        </UserContext.Provider>
+    );
+};
 
 
 export default UserContextProvider;
