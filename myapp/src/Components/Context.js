@@ -20,8 +20,10 @@ const UserContextProvider = ({ children }) => {
     });
 
     const userLogIn = () => setUser({ ...user, loggedIn: true })
+    const userLogOut = () => setUser({ ...user, loggedIn: false })
+
     return (
-        <UserContext.Provider value={{ user, userLogIn }}>
+        <UserContext.Provider value={{ user, userLogIn, userLogOut }}>
             {children}
         </UserContext.Provider>
     );

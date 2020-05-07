@@ -19,10 +19,15 @@ const Login = styled(Link)`
     padding:3px;
     border-bottom:2px solid blue;
 `;
+const LogOutBtn = styled.button`
+    font-size:1rem;
+    cursor: pointer;
+
+`;
 
 
 const Home = () => {
-    const { user: { name, loggedIn } } = useContext(UserContext)
+    const { user: { name, loggedIn }, userLogOut } = useContext(UserContext)
     // const context = useContext(UserContext)
     // console.log(UserContext)
     // console.log(context)
@@ -32,9 +37,12 @@ const Home = () => {
         <>
             <Div>
                 <div>Home</div>
-                {loggedIn ? name : "your"}  {loggedIn ? "logout" : <Login to="/login">login</Login>}
+                <div>
+                    {loggedIn ? name : "your"}  {loggedIn ? <LogOutBtn onClick={userLogOut}>LogOut</LogOutBtn> : <Login to="/login">LogIn</Login>}
+                </div>
             </Div>
         </>
     );
 }
+
 export default Home
