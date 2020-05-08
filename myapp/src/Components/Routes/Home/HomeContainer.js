@@ -28,9 +28,9 @@ const LogOutBtn = styled.button`
 
 const Home = () => {
     const { user: { name, loggedIn }, userLogOut } = useContext(UserContext)
-    // const context = useContext(UserContext)
+    const context = useContext(UserContext)
     // console.log(UserContext)
-    // console.log(context)
+    console.log(context)
     // console.log(name)
 
     return (

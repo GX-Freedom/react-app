@@ -93,9 +93,13 @@ const handleSocialLogin = (user, err) => {
     console.log(user)
     console.log(err)
 }
+const handleClick = (user) => {
+    console.log(user)
+}
 
 const Login = () => {
     const { userLogIn } = useContext(UserContext)
+
     return (
         <>
             <Div>LoginPage</Div>
@@ -117,7 +121,7 @@ const Login = () => {
                 // callback={handleSocialLogin}
                 >
                     <SocalLoginIcon>
-                        <i className="fab fa-github">
+                        <i onClick={handleClick} className="fab fa-github">
                             {/* <GitHubLogin clientId="cd5ed66b8c4c3fabbcd0"
                                 onSuccess={onSuccess}
                                 onFailure={onFailure} /> */}
